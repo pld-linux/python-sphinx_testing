@@ -8,7 +8,7 @@ Summary:	Testing utility classes and functions for Sphinx extensions
 Summary(pl.UTF-8):	Klasy i funkcje narzędziowe do testowania rozszerzeń Sphinksa
 Name:		python-sphinx_testing
 Version:	1.0.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/sphinx-testing/
