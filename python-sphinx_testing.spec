@@ -8,12 +8,13 @@ Summary:	Testing utility classes and functions for Sphinx extensions
 Summary(pl.UTF-8):	Klasy i funkcje narzędziowe do testowania rozszerzeń Sphinksa
 Name:		python-sphinx_testing
 Version:	1.0.1
-Release:	6
+Release:	7
 License:	BSD
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/sphinx-testing/
 Source0:	https://files.pythonhosted.org/packages/source/s/sphinx-testing/sphinx-testing-%{version}.tar.gz
 # Source0-md5:	0f60adab66d877ac8c2c23f78dc7ed32
+Patch0:		sphinx-testing-py3.patch
 URL:		https://pypi.org/project/sphinx-testing/
 %if %{with python2}
 BuildRequires:	python-modules >= 1:2.6
@@ -67,6 +68,7 @@ rozszerzeń Sphinksa.
 
 %prep
 %setup -q -n sphinx-testing-%{version}
+%patch -P0 -p1
 
 %build
 %if %{with python2}

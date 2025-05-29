@@ -1,0 +1,12 @@
+--- sphinx-testing-1.0.1/src/sphinx_testing/path.py.orig	2019-01-27 03:42:35.000000000 +0100
++++ sphinx-testing-1.0.1/src/sphinx_testing/path.py	2025-05-29 21:30:47.238519319 +0200
+@@ -156,7 +156,8 @@ class path(text_type):
+         """
+         Returns the text in the file.
+         """
+-        f = open(self, mode='U', **kwargs)
++        mode = 'rU' if PY2 else 'r'
++        f = open(self, mode=mode, **kwargs)
+         try:
+             return f.read()
+         finally:
